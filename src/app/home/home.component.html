@@ -1,2 +1,24 @@
 
-<p>home</p>
+<p>Instructions</p>
+Welcome to the TpFilRougeBack wiki!
+
+Database Creation
+1.1 Catalog Table Creation
+
+CREATE TABLE products ( id bigint(20) NOT NULL, title varchar(255) DEFAULT NULL, url varchar(255) DEFAULT NULL, price float DEFAULT NULL, tva float DEFAULT NULL ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE products ADD PRIMARY KEY (id);
+
+ALTER TABLE products MODIFY id bigint(20) NOT NULL AUTO_INCREMENT;
+
+1.2 Cart's Items Table Creation
+
+CREATE TABLE cart ( id bigint(20) NOT NULL, cart_id int(11) DEFAULT NULL, product_id int(11) DEFAULT NULL ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+1.3 Cart's Detailed Items View Creation
+
+CREATE TABLE cart_view ( cart_item_id bigint(20) ,product_id bigint(20) ,title varchar(255) ,url varchar(255) ,price float ,tva float );
+
+1.4 Catalog Records INSERT INTO products ( url, title, price, tva ) VALUES ("http://www.grassfedassociation.com/wp-content/uploads/2013/06/product_01.jpg", "product_01", 101, 1), ("http://www.grassfedassociation.com/wp-content/uploads/2013/06/product_02.jpg", "product_02", 202, 2), ("http://www.grassfedassociation.com/wp-content/uploads/2013/06/product_03.jpg", "product_03", 303, 3), ("http://www.grassfedassociation.com/wp-content/uploads/2013/06/product_04.jpg", "product_04", 404, 4), ("http://www.grassfedassociation.com/wp-content/uploads/2013/06/product_05.jpg", "product_05", 505, 5), ("http://www.grassfedassociation.com/wp-content/uploads/2013/06/product_06.jpg", "product_06", 606, 6), ("http://www.grassfedassociation.com/wp-content/uploads/2013/06/product_07.jpg", "product_07", 707, 7), ("http://www.grassfedassociation.com/wp-content/uploads/2013/06/product_08.jpg", "product_08", 808, 8), ("http://www.grassfedassociation.com/wp-content/uploads/2013/06/product_09.jpg", "product_09", 909, 9), ("http://www.grassfedassociation.com/wp-content/uploads/2013/06/product_10.jpg", "product_10", 1010, 10), ("http://www.grassfedassociation.com/wp-content/uploads/2013/06/product_11.jpg", "product_11", 1111, 11), ("http://www.grassfedassociation.com/wp-content/uploads/2013/06/product_12.jpg", "product_12", 1212, 12)
+
+Local root directory: C:\Users\ib\eclipse-workspace\TP_FilRouge\shop

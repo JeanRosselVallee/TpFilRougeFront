@@ -29,7 +29,7 @@ export class CatalogComponent implements OnInit {
   }
 
   public addToCart(p_product:Product):void{
-    alert(p_product.title+" a été ajouté au panier !");
+    //alert(p_product.title+" a été ajouté au panier !");
 
     this.myCartService.addToCart(p_product);
   }
