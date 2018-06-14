@@ -1,0 +1,12 @@
+.catalog{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product{
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+}
+
+    

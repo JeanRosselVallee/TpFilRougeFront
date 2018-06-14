@@ -1,0 +1,16 @@
+<input [(ngModel)]="nom" />
+<input [(ngModel)]="prix" />
+
+<div class="catalog">
+
+
+
+    <app-product-thumb  class="product"
+                        (addToCart)="addToCart($event)"
+                        *ngFor="let current of catalog | alpha:nom | price:prix"
+                        [data]="current" >
+    </app-product-thumb>
+
+
+
+</div>

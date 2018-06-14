@@ -1,0 +1,24 @@
+<label>Titre: </label>
+<input [(ngModel)]="product.title" />
+<br/>
+
+<label>Url: </label>
+<input [(ngModel)]="product.url" />
+<br/>
+
+<label>Prix: </label>
+<input type="number" step="0.01" [(ngModel)]="product.price" />
+<br/>
+
+<label>Tva: </label>
+<input type="number" step="0.01" [(ngModel)]="product.tva" />
+<br/>
+
+<button (click)="postProductHandler()" >Créer</button>
+
+
+<div *ngFor="let product of catalog">
+  <p>
+    {{product.title}} <button (click)="delProductHandler(product)">X</button>
+  </p>
+</div>
