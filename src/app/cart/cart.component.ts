@@ -28,12 +28,7 @@ export class CartComponent implements OnInit {
       }
     );
   }
-  /*
-  public remove( p_product:Product ):void{
-    this.service.removeFromCart(p_product);
-        window.location.reload();
-  }
-*/
+
   ngOnInit() {
     this.service.getFullCart().then(
       ( p_products:Product[]) => {
